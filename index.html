@@ -4,15 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>CMP DashBoard</title>
   </head>
   <body>
     <!-- ! NavBar Start ---------- -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand d-block d-md-none" href="#"
+          ><img src="img/logo.png" alt=""
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -24,25 +33,22 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+        <div
+          class="collapse navbar-collapse hstack gap-3 d-flex"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mx-auto my-auto mb-2 mb-md-3">
+            <!--? drop down element -->
+            <li class="nav-item dropdown d-flex align-items-center">
+              <select
+                class="form-select bg-warning px-5 text-light fs-4"
+                aria-label="Default select example"
               >
-                Dropdown
-              </a>
+                <option selected value="1">বন্দর থানা</option>
+                <option value="2">CTU</option>
+                <option value="3">RAB</option>
+                <option value="3"><h2>CID</h2></option>
+              </select>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -52,24 +58,225 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+            <li class="nav-item px-md-5 px-0">
+              <a class="navbar-brand d-none d-md-block" href="#"
+                ><img src="img/logo.png" alt=""
+              /></a>
+              <p>রজু বা নিস্পত্তিকৃত মামলা সংখ্যা</p>
+              <button type="button" class="btn btn-success px-5 ms-auto fs-3">
+                ৪ <i class="fa fa-arrow-right"></i>
+              </button>
+            </li>
+
+            <li class="nav-item d-flex align-items-center">
+              <a class="nav-link active" aria-current="page" href="#"
+                >০৮-০৪-২০২২</a
+              >
+              <i class="fa fa-calendar"></i>
             </li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
     <!-- ! NavBar End ---------- -->
+
+    <!-- ! Table Section start ----------- -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="table-responsive">
+          <table class="table table-hover table-borderless">
+            <thead>
+              <tr class="fs-5 text-center">
+                <th scope="col">#মামলা নম্বর</th>
+                <th scope="col">সংস্থা</th>
+                <th scope="col">অপরাধের ধরণ</th>
+                <th scope="col">মামলা ধরণ</th>
+                <th scope="col">পদক্ষেপ সমূহ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="text-center" scope="row">
+                  <h4>ক-২২-০৪-০০১</h4>
+                </th>
+                <td class="text-center">
+                  <select
+                    class="form-select bg-success text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option selected value="1">PBI</option>
+                    <option value="2">CTU</option>
+                    <option value="3">RAB</option>
+                    <option value="3"><h2>CID</h2></option>
+                  </select>
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-danger text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option selected value="1">খুন</option>
+                    <option value="2">যৌতুক</option>
+                    <option value="3">অপহরণ</option>
+                    <option value="3">ডাকাতি</option>
+                  </select>
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-warning text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option selected value="1">CR</option>
+                    <option value="2">GD</option>
+                    <option value="3">FIR</option>
+                  </select>
+                </td>
+                <td class="text-center fs-3">
+                  <a href="" class="mx-3"><i class="fa fa-file"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-user-circle"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-bell"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-check-circle"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-center" scope="row">
+                  <h4>ক-২২-০৪-০০১</h4>
+                </th>
+                <td class="text-center">
+                  <select
+                    class="form-select bg-success text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option value="1">PBI</option>
+                    <option selected value="2">CTU</option>
+                    <option value="3">RAB</option>
+                    <option value="3"><h2>CID</h2></option>
+                  </select>
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-danger text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option selected value="1">খুন</option>
+                    <option value="2">যৌতুক</option>
+                    <option value="3">অপহরণ</option>
+                    <option value="3">ডাকাতি</option>
+                  </select>
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-warning text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option selected value="1">CR</option>
+                    <option value="2">GD</option>
+                    <option value="3">FIR</option>
+                  </select>
+                </td>
+                <td class="text-center fs-md-3 fs-6">
+                  <a href="" class="mx-3"><i class="fa fa-file"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-user-circle"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-bell"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-check-circle"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-center" scope="row">
+                  <h4>ক-২২-০৪-০০১</h4>
+                </th>
+                <td class="text-center" colspan="1">
+                  <select
+                    class="form-select bg-success text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option value="1">PBI</option>
+                    <option value="2">CTU</option>
+                    <option selected value="3">RAB</option>
+                    <option value="3"><h2>CID</h2></option>
+                  </select>
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-danger text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option selected value="1">খুন</option>
+                    <option value="2">যৌতুক</option>
+                    <option value="3">অপহরণ</option>
+                    <option value="3">ডাকাতি</option>
+                  </select>
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-warning text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option selected value="1">CR</option>
+                    <option value="2">GD</option>
+                    <option value="3">FIR</option>
+                  </select>
+                </td>
+                <td class="text-center fs-md-3 fs-6">
+                  <a href="" class="mx-3"><i class="fa fa-file"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-user-circle"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-bell"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-check-circle"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-center" scope="row">
+                  <h4>ক-২২-০৪-০০১</h4>
+                </th>
+                <td class="text-center">
+                  <select
+                    class="form-select bg-success text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option value="1">PBI</option>
+                    <option value="2">CTU</option>
+                    <option value="3">RAB</option>
+                    <option selected value="3"><h2>CID</h2></option>
+                  </select>
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-danger text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option selected value="1">খুন</option>
+                    <option value="2">যৌতুক</option>
+                    <option value="3">অপহরণ</option>
+                    <option value="3">ডাকাতি</option>
+                  </select>
+                </td>
+                <td>
+                  <select
+                    class="form-select bg-warning text-light fs-4"
+                    aria-label="Default select example"
+                  >
+                    <option selected value="1">CR</option>
+                    <option value="2">GD</option>
+                    <option value="3">FIR</option>
+                  </select>
+                </td>
+                <td
+                  class="text-center d-flex justify-content-evenly fs-md-3 fs-6"
+                >
+                  <a href="" class="m-1"><i class="fa fa-file"></i></a>
+                  <a href="" class="m-1"><i class="fa fa-user-circle"></i></a>
+                  <a href="" class="m-1"><i class="fa fa-bell"></i></a>
+                  <a href="" class="m-1"><i class="fa fa-check-circle"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- ! Table Section End ----------- -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
