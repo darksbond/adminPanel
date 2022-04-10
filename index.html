@@ -16,69 +16,46 @@
     <title>CMP DashBoard</title>
   </head>
   <body>
-    <!-- ! NavBar Start ---------- -->
-    <nav class="navbar navbar-expand-md navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand d-block d-md-none" href="#"
-          ><img src="img/logo.png" alt=""
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse hstack gap-3 d-flex"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav mx-auto my-auto mb-2 mb-md-3">
-            <!--? drop down element -->
-            <li class="nav-item dropdown d-flex align-items-center">
-              <select
-                class="form-select bg-warning px-5 text-light fs-4"
-                aria-label="Default select example"
-              >
-                <option selected value="1">বন্দর থানা</option>
-                <option value="2">CTU</option>
-                <option value="3">RAB</option>
-                <option value="3"><h2>CID</h2></option>
-              </select>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item px-md-5 px-0">
-              <a class="navbar-brand d-none d-md-block" href="#"
-                ><img src="img/logo.png" alt=""
-              /></a>
-              <p>রজু বা নিস্পত্তিকৃত মামলা সংখ্যা</p>
-              <button type="button" class="btn btn-success px-5 ms-auto fs-3">
-                ৪ <i class="fa fa-arrow-right"></i>
-              </button>
-            </li>
+    <!-- ! Header Section Start ---------- -->
 
-            <li class="nav-item d-flex align-items-center">
-              <a class="nav-link active" aria-current="page" href="#"
-                >০৮-০৪-২০২২</a
-              >
-              <i class="fa fa-calendar"></i>
-            </li>
-          </ul>
+    <header class="d-md-flex d-block justify-content-evenly mb-2">
+      <div class="align-items-center d-flex">
+        <select
+          class="form-select bg-warning px-5 fw-bold text-light fs-3"
+          aria-label="Default select example"
+        >
+          <option selected value="1">বন্দর থানা</option>
+          <option value="2">CTU</option>
+          <option value="3">RAB</option>
+          <option value="3"><h2>CID</h2></option>
+        </select>
+      </div>
+      <div class="d-inline">
+        <div class="d-block">
+          <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" /></a>
+          <p>রজু বা নিস্পত্তিকৃত মামলা সংখ্যা</p>
+          <div class="d-flex align-items-center">
+            <button
+              type="button"
+              class="btn btn-success rounded-pill px-5 fs-3"
+            >
+              ৪ <i class="fa fa-arrow-right text-warning"></i>
+            </button>
+            <h3 class="mx-3 fw-bold">টি</h3>
+          </div>
         </div>
       </div>
-    </nav>
-    <!-- ! NavBar End ---------- -->
+      <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center bg-danger rounded-start fs-5">
+          <a class="nav-link text-light" aria-current="page" href="#"
+            >০৮-০৪-২০২২</a
+          >
+        </div>
+        <div class="fs-3 pl-color px-2"><i class="fa fa-calendar"></i></div>
+      </div>
+    </header>
+
+    <!-- ! Header Section End ---------- -->
 
     <!-- ! Table Section start ----------- -->
     <div class="main-content">
@@ -95,13 +72,14 @@
               </tr>
             </thead>
             <tbody>
+              <!-- ? --------- Table Row 1 ----------------------------------------->
               <tr>
                 <th class="text-center" scope="row">
-                  <h4>ক-২২-০৪-০০১</h4>
+                  <p class="fs-5 pt-color d-inline px-5 py-2">ক-২২-০৪-০০১</p>
                 </th>
                 <td class="text-center">
                   <select
-                    class="form-select bg-success text-light fs-4"
+                    class="form-select bg-success fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option selected value="1">PBI</option>
@@ -112,7 +90,7 @@
                 </td>
                 <td>
                   <select
-                    class="form-select bg-danger text-light fs-4"
+                    class="form-select bg-danger fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option selected value="1">খুন</option>
@@ -123,7 +101,7 @@
                 </td>
                 <td>
                   <select
-                    class="form-select bg-warning text-light fs-4"
+                    class="form-select bg-warning fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option selected value="1">CR</option>
@@ -131,20 +109,23 @@
                     <option value="3">FIR</option>
                   </select>
                 </td>
-                <td class="text-center fs-3">
+                <td
+                  class="text-center d-flex fw-bold justify-content-evenly fs-3"
+                >
                   <a href="" class="mx-3"><i class="fa fa-file"></i></a>
                   <a href="" class="mx-3"><i class="fa fa-user-circle"></i></a>
                   <a href="" class="mx-3"><i class="fa fa-bell"></i></a>
                   <a href="" class="mx-3"><i class="fa fa-check-circle"></i></a>
                 </td>
               </tr>
+              <!-- ?--------- Table Row 2 ------------------------------------------->
               <tr>
                 <th class="text-center" scope="row">
-                  <h4>ক-২২-০৪-০০১</h4>
+                  <p class="fs-5 pt-color d-inline px-5 py-2">ক-২২-০৪-০০১</p>
                 </th>
                 <td class="text-center">
                   <select
-                    class="form-select bg-success text-light fs-4"
+                    class="form-select bg-success fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option value="1">PBI</option>
@@ -155,7 +136,7 @@
                 </td>
                 <td>
                   <select
-                    class="form-select bg-danger text-light fs-4"
+                    class="form-select bg-danger fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option selected value="1">খুন</option>
@@ -166,7 +147,7 @@
                 </td>
                 <td>
                   <select
-                    class="form-select bg-warning text-light fs-4"
+                    class="form-select bg-warning fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option selected value="1">CR</option>
@@ -174,20 +155,21 @@
                     <option value="3">FIR</option>
                   </select>
                 </td>
-                <td class="text-center fs-md-3 fs-6">
+                <td class="text-center d-flex justify-content-evenly fs-3">
                   <a href="" class="mx-3"><i class="fa fa-file"></i></a>
                   <a href="" class="mx-3"><i class="fa fa-user-circle"></i></a>
                   <a href="" class="mx-3"><i class="fa fa-bell"></i></a>
                   <a href="" class="mx-3"><i class="fa fa-check-circle"></i></a>
                 </td>
               </tr>
+              <!-- ? -------- Table Row 3 ------------------------------------------->
               <tr>
                 <th class="text-center" scope="row">
-                  <h4>ক-২২-০৪-০০১</h4>
+                  <p class="fs-5 pt-color d-inline px-5 py-2">ক-২২-০৪-০০১</p>
                 </th>
                 <td class="text-center" colspan="1">
                   <select
-                    class="form-select bg-success text-light fs-4"
+                    class="form-select bg-success fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option value="1">PBI</option>
@@ -198,7 +180,7 @@
                 </td>
                 <td>
                   <select
-                    class="form-select bg-danger text-light fs-4"
+                    class="form-select bg-danger fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option selected value="1">খুন</option>
@@ -209,7 +191,7 @@
                 </td>
                 <td>
                   <select
-                    class="form-select bg-warning text-light fs-4"
+                    class="form-select bg-warning fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option selected value="1">CR</option>
@@ -217,20 +199,21 @@
                     <option value="3">FIR</option>
                   </select>
                 </td>
-                <td class="text-center fs-md-3 fs-6">
+                <td class="text-center d-flex justify-content-evenly fs-3">
                   <a href="" class="mx-3"><i class="fa fa-file"></i></a>
                   <a href="" class="mx-3"><i class="fa fa-user-circle"></i></a>
                   <a href="" class="mx-3"><i class="fa fa-bell"></i></a>
                   <a href="" class="mx-3"><i class="fa fa-check-circle"></i></a>
                 </td>
               </tr>
+              <!-- ? ------- Table Row 4  ------------------------------------------->
               <tr>
                 <th class="text-center" scope="row">
-                  <h4>ক-২২-০৪-০০১</h4>
+                  <p class="fs-5 pt-color d-inline px-5 py-2">ক-২২-০৪-০০১</p>
                 </th>
                 <td class="text-center">
                   <select
-                    class="form-select bg-success text-light fs-4"
+                    class="form-select bg-success fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option value="1">PBI</option>
@@ -241,7 +224,7 @@
                 </td>
                 <td>
                   <select
-                    class="form-select bg-danger text-light fs-4"
+                    class="form-select bg-danger fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option selected value="1">খুন</option>
@@ -252,7 +235,7 @@
                 </td>
                 <td>
                   <select
-                    class="form-select bg-warning text-light fs-4"
+                    class="form-select bg-warning fw-bold text-light fs-4"
                     aria-label="Default select example"
                   >
                     <option selected value="1">CR</option>
@@ -260,13 +243,11 @@
                     <option value="3">FIR</option>
                   </select>
                 </td>
-                <td
-                  class="text-center d-flex justify-content-evenly fs-md-3 fs-6"
-                >
-                  <a href="" class="m-1"><i class="fa fa-file"></i></a>
-                  <a href="" class="m-1"><i class="fa fa-user-circle"></i></a>
-                  <a href="" class="m-1"><i class="fa fa-bell"></i></a>
-                  <a href="" class="m-1"><i class="fa fa-check-circle"></i></a>
+                <td class="text-center d-flex justify-content-evenly fs-3">
+                  <a href="" class="mx-3"><i class="fa fa-file"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-user-circle"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-bell"></i></a>
+                  <a href="" class="mx-3"><i class="fa fa-check-circle"></i></a>
                 </td>
               </tr>
             </tbody>
